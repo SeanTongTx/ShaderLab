@@ -47,7 +47,8 @@ Parallax Specular = 600
 材质动画控制器。详细参考
 >MaterialAnimator
 
-## Generator <color="red">(Internal)</color>
+## ShaderLaboratory <color="red">(Internal)</color>(未实现)
 Shader代码生成器。
 生成Shader模板。也可以打开Shader代码并解析成模板。
 通过可视化操作为Shader添加代码，主要是添加常用数据结构。
+通过不断添加代码模板增加 降低写Shader的复杂度。

@@ -1,0 +1,31 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+  <ui:SplitPannel index="0" init-size="500" orientation="horizontal">
+    <ui:VisualElement class="generator-view"  >
+      <ui:IMGUIContainer name="savedir-view" style="height:22px;"/>
+      <ui:ScrollView name="ElementContainer" style="flex-grow:1;">
+      </ui:ScrollView>
+      <ui:Button name="btn-generate" text="Generate"/>
+    </ui:VisualElement>
+    <ui:VisualElement>
+      <ui:Label text="Preview:" style="background-color: rgba(156, 156, 156, 255);-unity-font-style:Bold;"/>
+      <ui:ScrollView>
+        <ui:Label text="Material Input:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Properties" class="preview-text"/>
+        <ui:Label text="SubShader Tags:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Shader-Tags" class="preview-text"/>
+        <ui:Label text="Pass Tags:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Pass_Tags" class="preview-text"/>
+        <ui:Label text="App 2 Vertex Input:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true" name="Preview-text_Vert-Input" class="preview-text"/>
+        <ui:Label text="Vertex 2 Fragment Input:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Frag-Input" class="preview-text"/>
+        <ui:Label text="Pass Input:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true" name="Preview-text_Pass-properties" class="preview-text"/>
+        <ui:Label text="Vertex Process:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Vert-process" class="preview-text"/>
+        <ui:Label text="Fragment Process:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Frag-process" class="preview-text"/>
+      </ui:ScrollView>
+    </ui:VisualElement>
+  </ui:SplitPannel>
+</ui:UXML>

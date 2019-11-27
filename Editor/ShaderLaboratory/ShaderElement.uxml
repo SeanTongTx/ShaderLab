@@ -1,0 +1,6 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+   <ui:VisualElement>
+      <ui:Button name="btn-generate" text="Generate"/>
+      <ui:Button name="btn-generate" text="Generate"/>
+    </ui:VisualElement>
+</ui:UXML>

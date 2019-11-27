@@ -2,7 +2,9 @@
     "name": "SeanLib.ShaderLab.Editor",
     "references": [
         "GUID:76aa88fa43b969c428cf4fcea4da8777",
-        "GUID:645e625aad2d67f409264fda341c71ea"
+        "GUID:645e625aad2d67f409264fda341c71ea",
+        "GUID:850ef7b5d689062428b62ab8db2c6304",
+        "GUID:c33f324bea481f347b324726474202a1"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -11,5 +13,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "noEngineReferences": false
 }
