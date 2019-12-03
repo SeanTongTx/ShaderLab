@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e828ae772cf1034b90399dcd83f7cda, type: 3}
+  m_Name: Color
+  m_EditorClassIdentifier: 
+  TemplateDes: "\u989C\u8272\u8F93\u5165\n\u6700\u57FA\u672CShader\u5143\u7D20\n\u5B9A\u4E49\u6750\u8D28\u53C2\u6570\u3002\n\u8F93\u5165Pass "
+  Template:
+    Shader_Properties: /*ATTRIBUTES*/_/*COLOR_NAME*/("/*COLOR_NAME*/", Color) = (1,1,1,0.5)
+    Shader_Tags: 
+    Pass_Tags: 
+    Pass_Pragmas: 
+    appdata: 
+    v2f: 
+    Pass_Properties: fixed4 _/*COLOR_NAME*/;
+    vert: 
+    frag: 
+  keyWords:
+  - key: /*COLOR_NAME*/
+    comment: "\u540D\u79F0"
+  - key: /*ATTRIBUTES*/
+    comment: "\u7279\u6027"
+  files:
+    UXML: ../ShaderElement.uxml
+    USS: ../ShaderElement.uss

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using UnityEditor;
 using UnityEngine;
-using static SeanLib.Core.InspectorPlus;
+using UnityEngine.UIElements;
 
 namespace SeanLib.CodeTemplate
 {
@@ -39,41 +40,67 @@ namespace SeanLib.CodeTemplate
         public string TemplateName => name;
         public KeyWord[] KeyWords => keyWords;
 
-        public ElementData Generate(Dictionary<string, string> KeyValues)
+        public ElementsFileAsset files = new ElementsFileAsset() { BaseType = typeof(ShaderElement), USS = "../ShaderElement.uss", UXML = "../ShaderElement.uxml" };
+        protected ShaderLaboratory lab;
+        private VisualElement elementRoot;
+        
+        public virtual void SetupElements(VisualElement container, ShaderLaboratory Lab)
         {
-            ElementData instanceData;
-            instanceData.Shader_Properties = Generate(KeyValues, Template.Shader_Properties);
-            instanceData.Shader_Tags = Generate(KeyValues, Template.Shader_Tags);
-            instanceData.Pass_Tags = Generate(KeyValues, Template.Pass_Tags);
-            instanceData.Pass_Pragmas = Generate(KeyValues, Template.Pass_Pragmas);
-            instanceData.appdata = Generate(KeyValues, Template.appdata);
-            instanceData.v2f = Generate(KeyValues, Template.v2f);
-            instanceData.Pass_Properties = Generate(KeyValues, Template.Pass_Properties);
-            instanceData.vert = Generate(KeyValues, Template.vert);
-            instanceData.frag = Generate(KeyValues, Template.frag);
-            return instanceData;
+            this.lab = Lab;
+            VisualTreeAsset nodeAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(PathTools.RelativeAssetPath(files.BaseType, files.UXML));
+            StyleSheet style = AssetDatabase.LoadAssetAtPath<StyleSheet>(PathTools.RelativeAssetPath(files.BaseType, files.USS));
+            elementRoot = nodeAsset.CloneTree();
+            elementRoot.styleSheets.Add(style);
+            elementRoot.name = TemplateName;
+            container.Add(elementRoot);
+            DefaultSetupElements();
         }
-        public void Debug(Dictionary<string, string> KeyValues)
+        public virtual void DefaultSetupElements()
         {
-            var data = Generate(KeyValues);
-            UnityEngine.Debug.Log("Shader_Properties----" + data.Shader_Properties);
-            UnityEngine.Debug.Log("Shader_Tags----" + data.Shader_Tags);
-            UnityEngine.Debug.Log("Pass_Tags----" + data.Pass_Tags);
-            UnityEngine.Debug.Log("appdata----" + data.appdata);
-            UnityEngine.Debug.Log("v2f----" + data.v2f);
-            UnityEngine.Debug.Log("Pass_Properties----" + data.Pass_Properties);
-            UnityEngine.Debug.Log("vert----" + data.vert);
-            UnityEngine.Debug.Log("frag----" + data.frag);
+            var elementName = elementRoot.Q<Foldout>("ElementName");
+            elementName.text = TemplateName;
+            var ElementsContainer = elementRoot.Q<VisualElement>("ElementsContainer");
+            var ToolBox = ElementsContainer.Q("ToolBox");
+            RefreshKeyData();
+            var Des= ElementsContainer.Q<TextField>("Description");
+            Des.value = TemplateDes;
+            Des.SetEnabled(false);
+            //工具箱
+            ToolBox.Q<Button>("Delete").clickable.clicked += () => lab.Delete(this);
+            ToolBox.Q<Button>("Preview").clickable.clicked += () => SetPreview(this);
         }
-        protected virtual string Generate(Dictionary<string, string> KeyValues, string template)
+        public virtual void RefreshKeyData()
         {
-            StringBuilder sb = new StringBuilder(template);
-            for (int i = 0; i < KeyWords.Length; i++)
+            var KEYWORDS = elementRoot.Q("KeyWords");
+            KEYWORDS.Clear();
+            foreach (var kw in keyWords)
             {
-                if (KeyValues.ContainsKey(KeyWords[i].key))
-                    sb.Replace(KeyWords[i].key, KeyValues[KeyWords[i].key]);
+                var key = new TextField(kw.comment);
+                key.value = lab.GetInput(kw.key);
+                key.isDelayed = true;
+                key.RegisterValueChangedCallback((e) => { lab.SetInput(kw.key, e.newValue); });
+                KEYWORDS.Add(key);
             }
-            return sb.ToString();
+        }
+
+        public virtual void SetPreview(ShaderElement se)
+        {
+            lab.Preview_text_Properties.value = CodeTemplate.Generate(se.Template.Shader_Properties, se.KeyWords, lab.UserInputKV);
+            lab.Visiblity(lab.Preview_text_Properties);
+            lab.Preview_text_Shader_Tags.value = CodeTemplate.Generate(se.Template.Shader_Tags, se.KeyWords, lab.UserInputKV);
+            lab.Visiblity(lab.Preview_text_Shader_Tags);
+            lab.Preview_text_Pass_Tags.value = CodeTemplate.Generate(se.Template.Pass_Tags, se.KeyWords, lab.UserInputKV);
+            lab.Visiblity(lab.Preview_text_Pass_Tags);
+            lab.Preview_text_Vert_Input.value = CodeTemplate.Generate(se.Template.appdata, se.KeyWords, lab.UserInputKV);
+            lab.Visiblity(lab.Preview_text_Vert_Input);
+            lab.Preview_text_Frag_Input.value = CodeTemplate.Generate(se.Template.v2f, se.KeyWords, lab.UserInputKV);
+            lab.Visiblity(lab.Preview_text_Frag_Input);
+            lab.Preview_text_Pass_properties.value = CodeTemplate.Generate(se.Template.Pass_Properties, se.KeyWords, lab.UserInputKV);
+            lab.Visiblity(lab.Preview_text_Pass_properties);
+            lab.Preview_text_Vert_process.value = CodeTemplate.Generate(se.Template.vert, se.KeyWords, lab.UserInputKV);
+            lab.Visiblity(lab.Preview_text_Vert_process);
+            lab.Preview_text_Frag_process.value = CodeTemplate.Generate(se.Template.frag, se.KeyWords, lab.UserInputKV);
+            lab.Visiblity(lab.Preview_text_Frag_process);
         }
     }
 }

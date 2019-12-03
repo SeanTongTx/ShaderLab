@@ -1,7 +1,13 @@
 ﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
   <ui:SplitPannel index="0" init-size="500" orientation="horizontal">
     <ui:VisualElement class="generator-view"  >
-      <ui:IMGUIContainer name="savedir-view" style="height:22px;"/>
+      <uie:Toolbar style="min-height: 18px; display: flex; visibility: visible; overflow: visible;">
+        <uie:ToolbarButton name="ToolBar_Add" text="+" style=" font-size: 16px;"/>
+        <ui:Label text="ShaderLab" style="flex-grow: 1; -unity-text-align: lower-center;" />
+        <!--uie:ToolbarButton text="H" style="-unity-text-align: lower-center;"/>
+        <uie:ToolbarButton text="E" style="-unity-text-align: lower-center;"/>
+        <uie:ToolbarMenu text="DocIndex" style="-unity-text-align: lower-center;"/-->
+      </uie:Toolbar>
       <ui:ScrollView name="ElementContainer" style="flex-grow:1;">
       </ui:ScrollView>
       <ui:Button name="btn-generate" text="Generate"/>
@@ -14,7 +20,7 @@
         <ui:Label text="SubShader Tags:" style="-unity-font-style:Bold;"/>
         <ui:TextField readonly="true"  name="Preview-text_Shader-Tags" class="preview-text"/>
         <ui:Label text="Pass Tags:" style="-unity-font-style:Bold;"/>
-        <ui:TextField readonly="true"  name="Preview-text_Pass_Tags" class="preview-text"/>
+        <ui:TextField readonly="true"  name="Preview-text_Pass-Tags" class="preview-text"/>
         <ui:Label text="App 2 Vertex Input:" style="-unity-font-style:Bold;"/>
         <ui:TextField readonly="true" name="Preview-text_Vert-Input" class="preview-text"/>
         <ui:Label text="Vertex 2 Fragment Input:" style="-unity-font-style:Bold;"/>

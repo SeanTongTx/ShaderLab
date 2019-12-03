@@ -1,6 +1,9 @@
 ﻿using EditorPlus;
 using SeanLib.Core;
+using ServiceTools.Reflect;
+using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,42 +14,96 @@ namespace SeanLib.CodeTemplate
     {
         protected override string UXML => "../ShaderLaboratory";
         protected override bool DefaultLayout => false;
-        [MenuItem("Assets/Create/CodeTemplate/ShaderGenerator",priority =50)]
+        [MenuItem("Assets/Create/CodeTemplate/ShaderLab", priority = 50)]
         public static void ShowThis()
         {
             var seanwindow = EditorWindow.GetWindow<SeanLibManager>();
             var Item = seanwindow.SeachIndex("ShaderLab/ShaderLaboratory");
             seanwindow.SelectIndex(Item.id);
         }
-
+        List<ShaderElement> shaderTemplates = new List<ShaderElement>();
         ScrollView ShaderElementsContainer;
-
-        VisualTreeAsset elementsNode;
-        StyleSheet elementsNode_styles;
-        public override void EnableUIElements()
+        #region Preivew
+        public TextField Preview_text_Properties;
+        public TextField Preview_text_Shader_Tags;
+        public TextField Preview_text_Pass_Tags;
+        public TextField Preview_text_Vert_Input;
+        public TextField Preview_text_Frag_Input;
+        public TextField Preview_text_Pass_properties;
+        public TextField Preview_text_Vert_process;
+        public TextField Preview_text_Frag_process;
+        public void Visiblity(TextField text)
         {
-            base.EnableUIElements();
+            text.style.visibility = string.IsNullOrEmpty(text.value) ? Visibility.Hidden : Visibility.Visible;
+        }
+
+        #endregion
+        public override void OnEnable(SeanLibManager drawer)
+        {
+            shaderTemplates.Clear();
+            var typeName = typeof(ShaderElement).ToString();
+            shaderTemplates.AddRange(AssetDBHelper.LoadAssets<ShaderElement>("t:" + typeName));
+
+            base.OnEnable(drawer);
+        }
+        public override void SetupUIElements()
+        {
+            base.SetupUIElements();
             //SetupElements
-            var SaveDirGUI = this.EditorContent_Elements.Q<IMGUIContainer>("savedir-view");
-            SaveDirGUI.onGUIHandler = () =>
+            //ToolBox
+            var addBtn = this.EditorContent_Elements.Q<ToolbarButton>("ToolBar_Add");
+            addBtn.clickable.clicked += () =>
             {
-                EditorGUILayout.LabelField("TODO:工具栏");
+                SelectWindow<ShaderElement>.Show(shaderTemplates, "ShaderTemplates", new SelectWindow<ShaderElement>.CallBack()
+                {
+                    OnSelected = (e, i) =>
+                    {
+                        e.SetupElements(ShaderElementsContainer, this);
+                    },
+                    WindowSize = () => new Vector2(400, shaderTemplates.Count * 25 + 40),
+                    DrawSelection = (e, i) =>
+                    {
+                        if (ShaderElementsContainer.Q(e.TemplateName) != null)
+                            OnGUIUtility.Vision.GUIEnabled(false);
+                        SelectWindow<ShaderElement>.DrawSelection(e, i);
+                        OnGUIUtility.Vision.GUIEnabled(true);
+                    }
+                });
             };
-            elementsNode = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(PathTools.RelativeAssetPath(typeof(ShaderElement), "../ShaderElement.uxml"));
-            elementsNode_styles = AssetDatabase.LoadAssetAtPath<StyleSheet>(PathTools.RelativeAssetPath(typeof(ShaderElement), "../ShaderElement.uss"));
-
-
+            //Container
             ShaderElementsContainer = this.EditorContent_Elements.Q<ScrollView>("ElementContainer");
+            ShaderElementsContainer.Clear();
+            //Preivew
+            Preview_text_Properties = EditorContent_Elements.Q<TextField>("Preview-text_Properties");
+            Preview_text_Shader_Tags = EditorContent_Elements.Q<TextField>("Preview-text_Shader-Tags");
+            Preview_text_Pass_Tags = EditorContent_Elements.Q<TextField>("Preview-text_Pass-Tags");
+            Preview_text_Vert_Input = EditorContent_Elements.Q<TextField>("Preview-text_Vert-Input");
+            Preview_text_Frag_Input = EditorContent_Elements.Q<TextField>("Preview-text_Frag-Input");
+            Preview_text_Pass_properties = EditorContent_Elements.Q<TextField>("Preview-text_Pass-properties");
+            Preview_text_Vert_process = EditorContent_Elements.Q<TextField>("Preview-text_Vert-process");
+            Preview_text_Frag_process = EditorContent_Elements.Q<TextField>("Preview-text_Frag-process");
+
+            //Generate
             var genrateButton = this.EditorContent_Elements.Q<Button>("btn-generate");
             genrateButton.clickable.clicked += OnGenerate;
-
-
-
         }
-        public override void OnGUI()
+
+        public void Delete(ShaderElement se)
         {
-            base.OnGUI();
-            EditorGUILayout.LabelField("这里应该是各种模板编辑了吧");
+            var delete = ShaderElementsContainer.Q(se.TemplateName);
+            ShaderElementsContainer.Remove(delete);
+        }
+        public void RefreshKV()
+        {
+            foreach (var item in shaderTemplates)
+            {
+                item.RefreshKeyData();
+            }
+        }
+        public override void SetInput(string key, string value)
+        {
+            base.SetInput(key, value);
+            this.RefreshKV();
         }
     }
 }
