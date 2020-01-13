@@ -1,0 +1,73 @@
+Label:hover
+{
+	color:rgb(255,255,255);
+}
+/*split pannel*/
+/*默认 分割面板是弹性100%填充父节点*/
+SplitPannel
+{
+	flex-grow:1;
+}
+.generator-view {
+	flex-grow:1;
+}
+.preview-view
+{
+	min-width:300;
+	max-width:1024;	
+	flex-grow:1;
+}
+/*预览*/
+.preview-text
+{
+	flex-grow:1;
+	display:none;
+}
+.preview-text TextInput
+{
+	-unity-text-align: upper-left;
+	background-color: rgba(255, 255, 255,0.3);
+}
+.template-text
+{
+	position: absolute;
+	bottom: 0; 
+	left: 0; 
+	top: 0; 
+	right: 0;
+	flex-grow:1;
+}
+.template-text TextInput
+{
+	-unity-text-align: upper-left;
+	color: rgba(0, 0, 0,0.5);
+	background-color: rgba(0, 0, 0,0.1);
+	-unity-background-image-tint-color: rgba(255, 255, 255,0.3);
+}
+/*调试*/
+.preview-text_debug
+{
+	flex-grow:1;
+	display:none;
+}
+.preview-text TextInput
+{
+	-unity-text-align: upper-left;
+	font-color: rgba(255, 0, 0,1);
+}
+
+.template-mask
+{
+	position: absolute;
+	bottom: 0; 
+	left: 0; 
+	top: 0; 
+	right: 0;
+	flex-grow:1;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255,0.1);
+}
+.template-mask Button
+{
+}

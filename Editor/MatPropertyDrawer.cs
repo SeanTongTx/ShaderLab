@@ -11,12 +11,12 @@ public class MatPropertyDrawer : DefaultPropertyDrawer
     {
         if (!property.isExpanded)
         {
-            OnGUIUtility.Property.DefaultPropertyField(position, property, label, false);
+            OnGUIUtility.GUIProperty.DefaultPropertyField(position, property, label, false);
         }
         else
         {
             position.height = EditorGUIUtility.singleLineHeight;
-            OnGUIUtility.Property.DefaultPropertyField(position, property, label, false);
+            OnGUIUtility.GUIProperty.DefaultPropertyField(position, property, label, false);
 
             SerializedProperty from= property.FindPropertyRelative("from");
             SerializedProperty to = property.FindPropertyRelative("to");

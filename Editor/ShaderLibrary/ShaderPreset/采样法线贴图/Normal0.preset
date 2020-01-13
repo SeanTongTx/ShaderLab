@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Normal0
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 5356d9848be317a479fd04ca487a7a3e,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: template
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].key
+    value: NORMAL_FRAG
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].comment
+    value: "\u8F93\u51FA\u6CD5\u7EBF"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].Flags
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[0].key
+    value: NORMAL_FRAG
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[0].value
+    value: worldNormal
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TemplateDes
+    value: "\u6A21\u578B\u6CD5\u7EBF"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: AllowMultipleCount
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Shader_Properties
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Shader_Tags
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Tags
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Pragmas
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.appdata
+    value: 'half3 normal : NORMAL;'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.v2f
+    value: 'half3 NORMAL_FRAG : NORMAL;'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Properties
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.vert
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.frag
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: DocPage
+    value: ShaderLaboratory/ShaderElements/Normal
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: space
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Vert_space_obj
+    value: o.NORMAL_FRAG = v.normal;
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Vert_space_world
+    value: o.NORMAL_FRAG = UnityObjectToWorldNormal(v.normal);
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Vert_space_screen
+    value: o.NORMAL_FRAG = COMPUTE_VIEW_NORMAL;
+    objectReference: {fileID: 0}

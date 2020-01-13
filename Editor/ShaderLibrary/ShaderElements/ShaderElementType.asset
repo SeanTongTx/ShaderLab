@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ccef84f9f0e464bac7d1f0fdb5fa85, type: 3}
+  m_Name: ShaderElementType
+  m_EditorClassIdentifier: 
+  template: "using EditorPlus;\r\nusing System.Collections.Generic;\r\nusing UnityEditor;\r\nusing
+    UnityEngine;\r\nusing UnityEngine.UIElements;\r\n\r\nnamespace SeanLib.ShaderLab\r\n{\r\r\n
+    \   [CreateAssetMenu(fileName = \"ELEMENT_NAME\", menuName = \"CodeTemplate/ShaderLab/ELEMENT_NAME\",
+    order = 50)]\n    public class ELEMENT_NAME:ShaderElement\r\n    {\r\n\r\n    }\r\n}\r\n"
+  keyWords:
+  - key: ELEMENT_NAME
+    comment: "\u65B0\u5143\u7D20\u7684\u7C7B\u540D"
+    Flags: 8

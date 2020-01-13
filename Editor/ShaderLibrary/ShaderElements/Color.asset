@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95801cce7a694f54490a83c24c937b3c, type: 3}
+  m_Name: Color
+  m_EditorClassIdentifier: 
+  template: 
+  keyWords:
+  - key: COLOR_NAME
+    comment: "\u540D\u79F0"
+    Flags: 12
+  - key: ATTRIBUTES
+    comment: "\u7279\u6027"
+    Flags: 2
+  - key: COLOR_DEFAULT
+    comment: "\u9ED8\u8BA4\u503C"
+    Flags: 10
+  ValueDic:
+    values: []
+  TemplateDes: "\u989C\u8272\u8F93\u5165"
+  AllowMultipleCount: 0
+  Template:
+    Shader_Properties: ATTRIBUTES_COLOR_NAME("COLOR_NAME", Color) = COLOR_DEFAULT
+    Shader_Tags: 
+    Pass_Tags: 
+    Pass_Pragmas: 
+    appdata: 
+    v2f: 
+    Pass_Properties: fixed4 _COLOR_NAME;
+    vert: 
+    frag: 
+  DocPage: ShaderLaboratory/ShaderElements/Color
+  avaliableAttributes: 03000000040000003700000038000000
+  attributes: []
+  color: {r: 1, g: 1, b: 1, a: 1}

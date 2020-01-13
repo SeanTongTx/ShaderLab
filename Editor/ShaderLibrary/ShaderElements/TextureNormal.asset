@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25a48e3e4c15f94dbad3ba73bd081aa, type: 3}
+  m_Name: TextureNormal
+  m_EditorClassIdentifier: 
+  template: 
+  keyWords:
+  - key: TEXTURE_NAME
+    comment: "\u8D34\u56FE\u540D"
+    Flags: 0
+  - key: TEXTURE_DEFAULT
+    comment: "\u9ED8\u8BA4\u8D34\u56FE"
+    Flags: 2
+  - key: SAMPLED_COLOR
+    comment: "\u8D34\u56FE\u91C7\u6837\u989C\u8272"
+    Flags: 0
+  - key: FRAG_WORLDNORMAL
+    comment: "\u7247\u6BB5\u6CD5\u7EBF"
+    Flags: 0
+  ValueDic:
+    values: []
+  TemplateDes: "\u6CD5\u7EBF\u8D34\u56FE"
+  AllowMultipleCount: 0
+  Template:
+    Shader_Properties: TEXTURE_NAME ("TEXTURE_NAME", 2D) = "TEXTURE_DEFAULT" {}
+    Shader_Tags: 
+    Pass_Tags: 
+    Pass_Pragmas: 
+    appdata: "\rfloat4 tangent : TANGENT;"
+    v2f: "\rfloat4 T2W[3] : TEXCOORD?;"
+    Pass_Properties: 'sampler2D TEXTURE_NAME;
+
+      float4 TEXTURE_NAME_ST;
+
+'
+    vert: "\rfloat3 worldPos = mul(_Object2World,v.vertex).xyz;\nfixed3 worldNormal
+      = /*MODEL_WORLD_NORMAL*/\nfixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);\nfixed3
+      worldBinormal = cross(worldNormal,worldTangent)*v.tangent.w;\r\no.T2W0=float4(worldTangent.x,worldBinomal.x,worldNormal.x,worldPos.x);\r\no.T2W1=float4(worldTangent.y,worldBinomal.y,worldNormal.y,worldPos.y);\r\no.T2W2=float4(worldTangent.z,worldBinomal.z,worldNormal.z,worldPos.z);"
+    frag: "\rfixed4 SAMPLED_COLOR = TEXTURE_FUNC(TEXTURE_NAME, /*FRAGMENT_UV*/);\nfixed3
+      texNormal=UnpackNormal(SAMPLED_COLOR)\nfixed3 FRAG_WORLDNORMAL = nomalize(half3(dot(i.T2W0.xyz,texNormal),dot(i.T2W1.xyz,texNormal)),dot(i.T2W2.xyz,texNormal)));\n"
+  DocPage: ShaderLaboratory/ShaderElements/TextureNormal
+  TexLod: 0

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61479f6b1693474d8d233d159299e62, type: 3}
+  m_Name: Vertex
+  m_EditorClassIdentifier: 
+  template: 
+  keyWords: []
+  ValueDic:
+    values: []
+  TemplateDes: "\u9876\u70B9"
+  AllowMultipleCount: 1
+  Template:
+    Shader_Properties: 
+    Shader_Tags: 
+    Pass_Tags: 
+    Pass_Pragmas: 
+    appdata: "\rfloat4 vertex : POSITION;"
+    v2f: "\rfloat4 vertex : SV_POSITION;"
+    Pass_Properties: 
+    vert: 
+    frag: 
+  DocPage: ShaderLaboratory/ShaderElements/Vertex
+  space: 0
+  Vert_space_clip: '//ClipPos
+
+    o.vertex = UnityObjectToClipPos(v.vertex);'
+  Vert_space_obj: o.vertex =v.vertex;
+  Vert_space_world: '//worldPos
+
+    float3 World_Pos = mul(unity_ObjectToWorld,
+    v.vertex);
+
+'

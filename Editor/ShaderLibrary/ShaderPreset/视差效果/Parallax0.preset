@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Parallax0
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: f985c3e5d34f8634d8a6bb36093fc441,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: template
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.size
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].key
+    value: FRAG_HEIGHT
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].comment
+    value: "\u50CF\u7D20\u9AD8\u5EA6"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].key
+    value: HEIGHT_OFFSET
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].comment
+    value: "\u9AD8\u5EA6\u504F\u79FB"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[2].key
+    value: PARALLAX_UV
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[2].comment
+    value: "\u89C6\u5DEE\u504F\u79FB\u540E\u7684UV"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[2].Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.size
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[0].key
+    value: FRAG_HEIGHT
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[0].value
+    value: /*FragHeight*/
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[1].key
+    value: HEIGHT_OFFSET
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[1].value
+    value: _Parallax
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[2].key
+    value: PARALLAX_UV
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[2].value
+    value: Parallax_UV
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TemplateDes
+    value: "\u89C6\u5DEE"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: AllowMultipleCount
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Shader_Properties
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Shader_Tags
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Tags
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Pragmas
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.appdata
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.v2f
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Properties
+    value: float PARALLAX_HEIGHT;
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.vert
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.frag
+    value: "\rhalf2 offset = ParallaxOffset(FRAG_HEIGHT, HEIGHT_OFFSET, /*TANGENT_VIEW*/);\nfloat2
+      PARALLAX_UV = /*TEXTURE_UV*/ + offset;\n"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: DocPage
+    value: ShaderLaboratory/ShaderElements/Parallax
+    objectReference: {fileID: 0}

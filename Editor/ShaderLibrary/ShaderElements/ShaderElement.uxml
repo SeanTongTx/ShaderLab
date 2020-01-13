@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement focusable="false" class="shader-element_root">
+        <Style path="Packages/com.seanlib.shaderlab/Editor/ShaderLaboratory/ShaderElements/ShaderElement.uss" />
+        <ui:Foldout text="ElementName" value="false" name="ElementName" style="flex-grow: 1;">
+            <ui:VisualElement name="ElementsContainer" style="flex-direction: row; border-left-width: 0; border-right-width: 0; border-top-width: 1px; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-color: rgb(133, 133, 133);">
+                <ui:VisualElement style="flex-grow: 1;">
+                    <ui:VisualElement name="KeyWords" style="flex-grow: 1;">
+                        <ui:Button text="Button" />
+                        <ui:Button text="Button" />
+                        <ui:Button text="Button" />
+                        <ui:Button text="Button" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Extension" style="flex-grow: 1;" />
+                    <ui:Foldout text="描述" value="false">
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Des" multiline="true" focusable="false" name="Description" readonly="true" style="display: flex; overflow: hidden; visibility: visible; opacity: 1;" />
+                    </ui:Foldout>
+                </ui:VisualElement>
+                <ui:VisualElement name="ToolBox" style="border-left-width: 1px; border-color: rgb(115, 115, 115); align-items: center; justify-content: center;">
+                    <ui:Button text="Preview" name="Preview" style="flex-grow: 1;" />
+                </ui:VisualElement>
+              
+            </ui:VisualElement>
+        </ui:Foldout>
+        <ui:Button text="X" name="Delete" class="button-delete"/>
+      <ui:Button text="?" name="Help" class="button-help" />
+    </ui:VisualElement>
+</ui:UXML>

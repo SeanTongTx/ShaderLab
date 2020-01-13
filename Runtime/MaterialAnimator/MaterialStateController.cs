@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "MaterialStateController", menuName = "MaterialStateController")]
+//[CreateAssetMenu(fileName = "MaterialStateController", menuName = "MaterialStateController")]
 public class MaterialStateController : ScriptableObject
 {
     [Tooltip(@"默认状态中需要填写所有其他参数的默认值。")]

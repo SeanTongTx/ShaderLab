@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShaderVariants
+  m_Shaders:
+  - first: {fileID: 4800000, guid: 2e2fc0d429a189b4a8ce19ca330c91b1, type: 3}
+    second:
+      variants:
+      - keywords: ENABLE_LIGHTING
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2
+        passType: 4
+      - keywords: ENABLE_LIGHTING SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2 SOURCE_MRT
+        passType: 4
+  - first: {fileID: 4800000, guid: 3bcf3d7b32d0ec2479c5136d782cddea, type: 3}
+    second:
+      variants:
+      - keywords: ENABLE_LIGHTING
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2
+        passType: 4
+      - keywords: ENABLE_LIGHTING SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2 SOURCE_MRT
+        passType: 4
+  - first: {fileID: 4800000, guid: d057abdc6fc7f92478d7db7ff0ead184, type: 3}
+    second:
+      variants:
+      - keywords: ENABLE_LIGHTING
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2
+        passType: 4
+      - keywords: ENABLE_LIGHTING SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2 SOURCE_MRT
+        passType: 4
+  - first: {fileID: 4800000, guid: d9b149dad4d4e6a419ef9fbb4bf96a86, type: 3}
+    second:
+      variants:
+      - keywords: ENABLE_LIGHTING
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2
+        passType: 4
+      - keywords: ENABLE_LIGHTING SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2 SOURCE_MRT
+        passType: 4
+  - first: {fileID: 4800000, guid: e232721bc1cf9bd4f99565c58d51744f, type: 3}
+    second:
+      variants:
+      - keywords: ENABLE_LIGHTING
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2
+        passType: 4
+      - keywords: ENABLE_LIGHTING SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2 SOURCE_MRT
+        passType: 4
+  - first: {fileID: 4800000, guid: 8ae76bd129868a44a891837b6ac7f272, type: 3}
+    second:
+      variants:
+      - keywords: ENABLE_LIGHTING
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2
+        passType: 4
+      - keywords: ENABLE_LIGHTING SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_LINEAR SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_LIGHTING FOG_EXP2 SOURCE_MRT
+        passType: 4

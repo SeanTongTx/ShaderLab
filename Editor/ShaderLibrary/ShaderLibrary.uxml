@@ -1,0 +1,50 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+  <ui:SplitPannel index="1" init-size="300" orientation="horizontal">
+    <!--生成器-->
+    <ui:VisualElement class="generator-view"  >
+      <ui:TextField readonly="true"  multiline="true"  name="Template-Shader_Template" class="template-text"/>
+      <!--工具栏-->
+      <uie:Toolbar style="min-height: 18px; display: flex; visibility: visible; overflow: visible;">
+        <uie:ToolbarButton name="ToolBar_Add" text="+" style=" font-size: 16px;"/>
+        <ui:Label text="ShaderLab" style="flex-grow: 1; -unity-text-align: lower-center;" />
+        <uie:ToolbarButton text="P" name="ToolBar_Preset" style="-unity-text-align: lower-center;"/>
+        <!--<uie:ToolbarMenu text="DocIndex" style="-unity-text-align: lower-center;"/-->
+      </uie:Toolbar>
+      <ui:VisualElement name="Shader-Template_Container"/>
+      <!--Shader 元素操作区-->
+      <ui:ScrollView name="ElementContainer" style="flex-grow:1;">
+      </ui:ScrollView>
+      <!--最终胜出-->
+      <ui:Button name="btn-generate" text="Generate"/>
+      <!--没有Template时候 遮挡-->
+      <ui:VisualElement  name="Template-Shader_Mask"  class="template-mask"  >
+        <ui:Button name="btn-SelectTemplate" text="Select Shader Template"/>
+        <ui:Button name="btn-SelectPreset" text="Select Shader Preset"/>
+      </ui:VisualElement>
+    </ui:VisualElement>
+    <!--预览-->
+    <ui:VisualElement class="preview-view">
+      <ui:Label text="Preview:" style="background-color: rgba(156, 156, 156, 255);-unity-font-style:Bold;"/>
+      <ui:ScrollView>
+        <ui:Label text="ShaderTemplate" style="-unity-font-style:Bold;-unity-text-align:uppercenter; "/>
+        <ui:TextField readonly="true"  name="Preview-text_Shader-Template" class="preview-text"/>
+        <ui:Label text="Material Input:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Properties" class="preview-text"/>
+        <ui:Label text="SubShader Tags:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Shader-Tags" class="preview-text"/>
+        <ui:Label text="Pass Tags:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Pass-Tags" class="preview-text"/>
+        <ui:Label text="App 2 Vertex Input:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true" name="Preview-text_Vert-Input" class="preview-text"/>
+        <ui:Label text="Vertex 2 Fragment Input:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Frag-Input" class="preview-text"/>
+        <ui:Label text="Pass Input:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true" name="Preview-text_Pass-properties" class="preview-text"/>
+        <ui:Label text="Vertex Process:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Vert-process" class="preview-text"/>
+        <ui:Label text="Fragment Process:" style="-unity-font-style:Bold;"/>
+        <ui:TextField readonly="true"  name="Preview-text_Frag-process" class="preview-text"/>
+      </ui:ScrollView>
+    </ui:VisualElement>
+  </ui:SplitPannel>
+</ui:UXML>

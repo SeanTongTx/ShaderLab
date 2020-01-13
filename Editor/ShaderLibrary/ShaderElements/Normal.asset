@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5356d9848be317a479fd04ca487a7a3e, type: 3}
+  m_Name: Normal
+  m_EditorClassIdentifier: 
+  template: 
+  keyWords:
+  - key: NORMAL_FRAG
+    comment: "\u8F93\u51FA\u6CD5\u7EBF"
+    Flags: 12
+  ValueDic:
+    values: []
+  TemplateDes: "\u6A21\u578B\u6CD5\u7EBF"
+  AllowMultipleCount: 1
+  Template:
+    Shader_Properties: 
+    Shader_Tags: 
+    Pass_Tags: 
+    Pass_Pragmas: 
+    appdata: 'half3 normal : NORMAL;'
+    v2f: 'half3 NORMAL_FRAG : NORMAL;'
+    Pass_Properties: 
+    vert: 
+    frag: 
+  DocPage: ShaderLaboratory/ShaderElements/Normal
+  space: 0
+  Vert_space_obj: o.NORMAL_FRAG = v.normal;
+  Vert_space_world: o.NORMAL_FRAG = UnityObjectToWorldNormal(v.normal);
+  Vert_space_screen: o.NORMAL_FRAG = COMPUTE_VIEW_NORMAL;

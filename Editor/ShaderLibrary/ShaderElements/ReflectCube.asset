@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e3597829d6a5242ad7a1483056f412, type: 3}
+  m_Name: ReflectCube
+  m_EditorClassIdentifier: 
+  template: 
+  keyWords:
+  - key: WORLD_REFLECT
+    comment: "\u4E16\u754C\u7A7A\u95F4\u53CD\u5C04"
+    Flags: 4
+  - key: /*WorldNormal*/
+    comment: "\u4E16\u754C\u7A7A\u95F4\u6CD5\u7EBF"
+    Flags: 8
+  ValueDic:
+    values: []
+  TemplateDes: "CubeMap\u53CD\u5C04\u8BA1\u7B97"
+  AllowMultipleCount: 0
+  Template:
+    Shader_Properties: 
+    Shader_Tags: 
+    Pass_Tags: 
+    Pass_Pragmas: 
+    appdata: 
+    v2f: 'float3 WORLD_REFLECT : TEXCOORD?;'
+    Pass_Properties: 
+    vert: 'half3 worldPos = mul(unity_ObjectToWorld, v.vertex);
+
+      half3 worldNormal
+      = /*WorldNormal*/
+
+      half3 worldViewDir = normalize(UnityWorldSpaceViewDir(worldPos.xyz));
+
+      o.WORLD_REFLECT
+      = reflect(-worldViewDir, normalize(worldNormal));'
+    frag: 
+  DocPage: ShaderLaboratory/ShaderElements/ReflectCube

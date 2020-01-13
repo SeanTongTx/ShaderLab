@@ -29,13 +29,13 @@ public class MaterialAnimator : MonoBehaviour
     [InspectorPlus.ReadOnly]
     public bool Playing;
     public float time { get; private set; }
-    Renderer renderer;
+    Renderer _renderer;
     public Renderer Renderer
     {
         get
         {
-            renderer = renderer ?? GetComponent<Renderer>();
-            return renderer;
+            _renderer = _renderer ?? GetComponent<Renderer>();
+            return _renderer;
         }
     }
     /// <summary>

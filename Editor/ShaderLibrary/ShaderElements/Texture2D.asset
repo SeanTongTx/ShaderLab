@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e02aa6ccaaa20548b0c661905b4b83c, type: 3}
+  m_Name: Texture2D
+  m_EditorClassIdentifier: 
+  template: 
+  keyWords:
+  - key: TEXTURE_NAME
+    comment: "\u8D34\u56FE\u540D"
+    Flags: 12
+  - key: TEXTURE_DEFAULT
+    comment: "\u9ED8\u8BA4\u8D34\u56FE"
+    Flags: 10
+  - key: /*FRAGMENT_UV*/
+    comment: "\u7247\u6BB5\u4E2DUV\u8F93\u5165"
+    Flags: 2
+  - key: SAMPLED_COLOR
+    comment: "\u7247\u6BB5\u4E2D\u8F93\u51FA\u989C\u8272"
+    Flags: 4
+  - key: TEXTURE_FUNC
+    comment: "\u91C7\u6837\u65B9\u6CD5"
+    Flags: 10
+  ValueDic:
+    values: []
+  TemplateDes: "\u8D34\u56FE"
+  AllowMultipleCount: 0
+  Template:
+    Shader_Properties: TEXTURE_NAME ("TEXTURE_NAME", 2D) = "TEXTURE_DEFAULT" {}
+    Shader_Tags: 
+    Pass_Tags: 
+    Pass_Pragmas: 
+    appdata: 
+    v2f: 
+    Pass_Properties: 'sampler2D TEXTURE_NAME;
+
+      float4 TEXTURE_NAME_ST;
+
+'
+    vert: 
+    frag: "\rfixed4 SAMPLED_COLOR = TEXTURE_FUNC(TEXTURE_NAME, /*FRAGMENT_UV*/);"
+  DocPage: ShaderLaboratory/ShaderElements/Texture2D
+  TexLod: 0

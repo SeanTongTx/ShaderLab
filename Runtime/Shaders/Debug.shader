@@ -93,8 +93,6 @@
 					switch (_Space)
 					{
 						case 2:
-							//normalize
-							o.ScreenPos /= o.ScreenPos.w;
 							//屏幕UV坐标 xy
 							o.ScreenPos.xy = TRANSFORM_TEX(o.ScreenPos.xy, _MainTex);
 							o.uv = o.ScreenPos.xy; break;
@@ -138,7 +136,7 @@
 									return col;
 								case 2:
 									half4 screenPos = i.ScreenPos;
-									fixed4 col1 = tex2D(_MainTex, screenPos.xy);
+									fixed4 col1 = tex2D(_MainTex, screenPos.xy/ screenPos.w);
 									return col1;
 							}
 						}break;

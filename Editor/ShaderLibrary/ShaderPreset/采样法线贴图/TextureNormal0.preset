@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TextureNormal0
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: b25a48e3e4c15f94dbad3ba73bd081aa,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: template
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.size
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].key
+    value: TEXTURE_NAME
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].comment
+    value: "\u8D34\u56FE\u540D"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].key
+    value: TEXTURE_DEFAULT
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].comment
+    value: "\u9ED8\u8BA4\u8D34\u56FE"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].Flags
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[2].key
+    value: SAMPLED_COLOR
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[2].comment
+    value: "\u8D34\u56FE\u91C7\u6837\u989C\u8272"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[2].Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[3].key
+    value: FRAG_WORLDNORMAL
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[3].comment
+    value: "\u7247\u6BB5\u6CD5\u7EBF"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[3].Flags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.size
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[0].key
+    value: TEXTURE_DEFAULT
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[0].value
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[1].key
+    value: TEXTURE_FUNC
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[1].value
+    value: tex2D
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[2].key
+    value: TEXTURE_NAME
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[2].value
+    value: _NormalTexture
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[3].key
+    value: SAMPLED_COLOR
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[3].value
+    value: ColNormal
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[4].key
+    value: FRAG_WORLDNORMAL
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[4].value
+    value: worldNormal
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TemplateDes
+    value: "\u6CD5\u7EBF\u8D34\u56FE"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: AllowMultipleCount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Shader_Properties
+    value: TEXTURE_NAME ("TEXTURE_NAME", 2D) = "TEXTURE_DEFAULT" {}
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Shader_Tags
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Tags
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Pragmas
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.appdata
+    value: "\rfloat4 tangent : TANGENT;"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.v2f
+    value: "\rfloat4 T2W[3] : TEXCOORD?;"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Properties
+    value: 'sampler2D TEXTURE_NAME;
+
+      float4 TEXTURE_NAME_ST;
+
+'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.vert
+    value: "\rfloat3 worldPos = mul(_Object2World,v.vertex).xyz;\nfixed3 worldNormal
+      = /*MODEL_WORLD_NORMAL*/\nfixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);\nfixed3
+      worldBinormal = cross(worldNormal,worldTangent)*v.tangent.w;\r\no.T2W0=float4(worldTangent.x,worldBinomal.x,worldNormal.x,worldPos.x);\r\no.T2W1=float4(worldTangent.y,worldBinomal.y,worldNormal.y,worldPos.y);\r\no.T2W2=float4(worldTangent.z,worldBinomal.z,worldNormal.z,worldPos.z);"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.frag
+    value: "\rfixed4 SAMPLED_COLOR = TEXTURE_FUNC(TEXTURE_NAME, /*FRAGMENT_UV*/);\nfixed3
+      texNormal=UnpackNormal(SAMPLED_COLOR)\nfixed3 FRAG_WORLDNORMAL = nomalize(half3(dot(i.T2W0.xyz,texNormal),dot(i.T2W1.xyz,texNormal)),dot(i.T2W2.xyz,texNormal)));\n"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: DocPage
+    value: ShaderLaboratory/ShaderElements/TextureNormal
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TexLod
+    value: 0
+    objectReference: {fileID: 0}

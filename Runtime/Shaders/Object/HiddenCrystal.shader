@@ -1,4 +1,4 @@
-﻿
+
 Shader "Hidden/ShaderLab/Object/Crystal"
 {
 	 Properties
@@ -77,7 +77,7 @@ Shader "Hidden/ShaderLab/Object/Crystal"
                 UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
-
+			
 			FRAG_OUT_TYPE frag (v2f i) : SV_Target
             {
 				half4 col = tex2D(_MainTex, i.uv);

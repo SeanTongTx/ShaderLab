@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TextureCube0
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 865d2e989b773ec4aa67a08f4ac95e3e,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: template
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.size
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].key
+    value: TEXTURE_NAME
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].comment
+    value: "\u8D34\u56FE\u540D"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].Flags
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].key
+    value: TEXTURE_DEFAULT
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].comment
+    value: "\u9ED8\u8BA4\u8D34\u56FE"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].Flags
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[2].key
+    value: /*FRAGMENT_UVW*/
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[2].comment
+    value: "\u7247\u6BB5\u91C7\u6837\u70B9(float3)"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[2].Flags
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[3].key
+    value: SAMPLED_COLOR
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[3].comment
+    value: "\u7247\u6BB5\u4E2D\u8F93\u51FA\u989C\u8272"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[3].Flags
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[4].key
+    value: TEXTURE_FUNC
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[4].comment
+    value: "\u91C7\u6837\u65B9\u6CD5"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[4].Flags
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.size
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[0].key
+    value: TEXTURE_DEFAULT
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[0].value
+    value: White
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[1].key
+    value: TEXTURE_FUNC
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[1].value
+    value: UNITY_SAMPLE_TEXCUBE_LOD
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[2].key
+    value: TEXTURE_NAME
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[2].value
+    value: CubeMap
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[3].key
+    value: SAMPLED_COLOR
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[3].value
+    value: CubeColor
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TemplateDes
+    value: "Cube\u8D34\u56FE\n"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: AllowMultipleCount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Shader_Properties
+    value: TEXTURE_NAME ("TEXTURE_NAME", CUBE) = "TEXTURE_DEFAULT" {}
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Shader_Tags
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Tags
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Pragmas
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.appdata
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.v2f
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Properties
+    value: 'uniform samplerCUBE TEXTURE_NAME;
+
+      uniform float4 TEXTURE_NAME_HDR;
+
+'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.vert
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.frag
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: DocPage
+    value: ShaderLaboratory/ShaderElements/TextureCube
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TexLod
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: DecodeHDR
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: UseReflectProbe
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: FragSimple
+    value: "\rfixed4 SAMPLED_COLOR = TEXTURE_FUNC(TEXTURE_NAME, /*FRAGMENT_UVW*/);"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: FragHDR
+    value: "\rfixed3 SAMPLED_COLOR = DecodeHDR(TEXTURE_FUNC(TEXTURE_NAME, /*FRAGMENT_UVW*/),TEXTURE_NAME_HDR);"
+    objectReference: {fileID: 0}

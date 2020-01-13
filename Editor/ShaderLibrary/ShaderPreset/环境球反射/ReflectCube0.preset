@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ReflectCube0
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: f7e3597829d6a5242ad7a1483056f412,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: template
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].key
+    value: WORLD_REFLECT
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].comment
+    value: "\u4E16\u754C\u7A7A\u95F4\u53CD\u5C04"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[0].Flags
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].key
+    value: /*WorldNormal*/
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].comment
+    value: "\u4E16\u754C\u7A7A\u95F4\u6CD5\u7EBF"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: keyWords.Array.data[1].Flags
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[0].key
+    value: WORLD_REFLECT
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[0].value
+    value: worldRef
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[1].key
+    value: /*WorldNormal*/
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ValueDic.values.Array.data[1].value
+    value: NORMAL_FRAG
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TemplateDes
+    value: "CubeMap\u53CD\u5C04\u8BA1\u7B97\u3002\n\u53EA\u8BA1\u7B97\u53CD\u5C04\u53C2\u6570\uFF0C\u91C7\u6837\u8D34\u56FE\u53C2\u8003TextureCube"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: AllowMultipleCount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Shader_Properties
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Shader_Tags
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Tags
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Pragmas
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.appdata
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.v2f
+    value: 'float3 WORLD_REFLECT : TEXCOORD?;'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.Pass_Properties
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.vert
+    value: 'half3 worldPos = mul(unity_ObjectToWorld, v.vertex);
+
+      half3 worldNormal
+      = /*WorldNormal*/
+
+      half3 worldViewDir = normalize(UnityWorldSpaceViewDir(worldPos.xyz));
+
+      o.WORLD_REFLECT
+      = reflect(-worldViewDir, normalize(worldNormal));'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Template.frag
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: DocPage
+    value: ShaderLaboratory/ShaderElements/ReflectCube
+    objectReference: {fileID: 0}

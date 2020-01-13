@@ -1,0 +1,47 @@
+.shader-element_root
+{
+	border-left-width: 1;
+	border-right-width: 1;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	margin-top:1px;
+	margin-bottom:1px;
+	flex-direction: column;
+	background-color: rgba(0,0,0,0.3);
+
+}
+
+/*БъЬт*/
+.unity-foldout .unity-toggle:hover
+{
+	background-color: rgba(255,255,255,0.3);
+}
+.button-help
+{
+	border-left-width: 0;
+	border-right-width: 0;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	position: absolute;
+	flex-direction: column;
+	right: 23;
+	background-image: none;
+	background-color: rgba(255,255,255,0);
+}
+.button-delete
+{
+	border-left-width: 0;
+	border-right-width: 0;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	position: absolute;
+	flex-direction: column;
+	right: 0;
+	background-image: none;
+	background-color: rgba(255,255,255,0);
+}
+
+Button:hover
+{
+	color:rgb(255,255,255);
+}

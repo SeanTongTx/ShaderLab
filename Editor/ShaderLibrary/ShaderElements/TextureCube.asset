@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865d2e989b773ec4aa67a08f4ac95e3e, type: 3}
+  m_Name: TextureCube
+  m_EditorClassIdentifier: 
+  template: 
+  keyWords:
+  - key: TEXTURE_NAME
+    comment: "\u8D34\u56FE\u540D"
+    Flags: 12
+  - key: TEXTURE_DEFAULT
+    comment: "\u9ED8\u8BA4\u8D34\u56FE"
+    Flags: 10
+  - key: /*FRAGMENT_UVW*/
+    comment: "\u7247\u6BB5\u91C7\u6837\u70B9(float3)"
+    Flags: 2
+  - key: SAMPLED_COLOR
+    comment: "\u7247\u6BB5\u4E2D\u8F93\u51FA\u989C\u8272"
+    Flags: 12
+  - key: TEXTURE_FUNC
+    comment: "\u91C7\u6837\u65B9\u6CD5"
+    Flags: 10
+  ValueDic:
+    values: []
+  TemplateDes: "Cube\u8D34\u56FE"
+  AllowMultipleCount: 0
+  Template:
+    Shader_Properties: TEXTURE_NAME ("TEXTURE_NAME", CUBE) = "TEXTURE_DEFAULT" {}
+    Shader_Tags: 
+    Pass_Tags: 
+    Pass_Pragmas: 
+    appdata: 
+    v2f: 
+    Pass_Properties: 'uniform samplerCUBE TEXTURE_NAME;
+
+      uniform float4 TEXTURE_NAME_HDR;
+
+'
+    vert: 
+    frag: 
+  DocPage: ShaderLaboratory/ShaderElements/TextureCube
+  TexLod: 0
+  DecodeHDR: 0
+  UseReflectProbe: 0
+  FragSimple: "\rfixed4 SAMPLED_COLOR = TEXTURE_FUNC(_TEXTURE_NAME, /*FRAGMENT_UVW*/);"
+  FragHDR: "\rfixed3 SAMPLED_COLOR = DecodeHDR(TEXTURE_FUNC(TEXTURE_NAME, /*FRAGMENT_UVW*/),TEXTURE_NAME_HDR);"

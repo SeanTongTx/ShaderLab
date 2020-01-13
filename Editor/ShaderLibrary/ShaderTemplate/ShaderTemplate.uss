@@ -1,0 +1,50 @@
+﻿Label:hover
+{
+	color:rgb(255,255,255);
+}
+.shader-template_root
+{
+	border-left-width: 1;
+	border-right-width: 1;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+}
+.shader-template_container
+{
+	background-color: rgba(0,0,0,0.4);
+}
+
+.shader-template_container Toggle:hover
+{	
+	background-color: rgba(255,255,255,0.3);
+}
+
+/*标题*/
+.button-help
+{
+	border-left-width: 0;
+	border-right-width: 0;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	position: absolute;
+	flex-direction: column;
+	right: 23;
+	background-image: none;
+	background-color: rgba(255,255,255,0);
+}
+.button-delete
+{
+	border-left-width: 0;
+	border-right-width: 0;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	position: absolute;
+	flex-direction: column;
+	right: 0;
+	background-image: none;
+	background-color: rgba(255,255,255,0);
+}
+Button:hover
+{
+	color:rgb(255,255,255);
+}

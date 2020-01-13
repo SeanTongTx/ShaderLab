@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Variants
+  m_Shaders:
+  - first: {fileID: 4800000, guid: f0ab0091c76628b4a9976395d432e578, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 4d7d4a6c2a80d3b4a8ec6d4a798e4319, type: 3}
+    second:
+      variants:
+      - keywords: ENABLE_RAMP_SPECULAR USE_FIXED_VIEW_LIGHTDIR
+        passType: 4
+      - keywords: ENABLE_NORMALMAP USE_FIXED_VIEW_LIGHTDIR
+        passType: 4
+      - keywords: ENABLE_NORMALMAP ENABLE_RAMP_SPECULAR USE_FIXED_VIEW_LIGHTDIR
+        passType: 4
+      - keywords: ENABLE_RAMP_SPECULAR SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_NORMALMAP SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_NORMALMAP ENABLE_RAMP_SPECULAR SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_RAMP_SPECULAR
+        passType: 4
+      - keywords: ENABLE_NORMALMAP
+        passType: 4
+      - keywords: ENABLE_NORMALMAP ENABLE_RAMP_SPECULAR
+        passType: 4
+  - first: {fileID: 4800000, guid: 1d51270aa4755974fba2f4f028bfc23c, type: 3}
+    second:
+      variants:
+      - keywords: ENABLE_SPECULAR USE_FIXED_VIEW_LIGHTDIR
+        passType: 4
+      - keywords: ENABLE_ANISOTROPY USE_FIXED_VIEW_LIGHTDIR
+        passType: 4
+      - keywords: ENABLE_ANISOTROPY ENABLE_SPECULAR USE_FIXED_VIEW_LIGHTDIR
+        passType: 4
+      - keywords: ENABLE_ANISOTROPY SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_SPECULAR SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_ANISOTROPY ENABLE_SPECULAR SOURCE_MRT
+        passType: 4
+      - keywords: ENABLE_ANISOTROPY
+        passType: 4
+      - keywords: ENABLE_SPECULAR
+        passType: 4
+      - keywords: ENABLE_ANISOTROPY ENABLE_SPECULAR
+        passType: 4
+  - first: {fileID: 4800000, guid: a4d2b96accfffdb4d843568b2b7a0b30, type: 3}
+    second:
+      variants:
+      - keywords: ENABLE_SHIFT USE_FIXED_VIEW_LIGHTDIR
+        passType: 4
+      - keywords: ENABLE_SHIFT
+        passType: 4
+      - keywords: ENABLE_SHIFT SOURCE_MRT
+        passType: 4

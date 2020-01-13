@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement style="flex-direction: row;">
+        <Style path="Packages/com.seanlib.shaderlab/Editor/ShaderLaboratory/ShaderElements/KeyWordInput.uss" />
+        <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" name="TextInput" style="flex-grow: 1; display: flex; visibility: visible; overflow: visible;" />
+        <ui:VisualElement name="RefInput" style="flex-direction: row; flex-grow: 1; display: none;">
+            <ui:Label text="Label" name="Key_Label" style="width: 151px;" />
+            <ui:Button text="Button" name="Key_Ref" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:Button text="◎" name="Btn_RefInput" style="-unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; background-image: none;" />
+    </ui:VisualElement>
+</ui:UXML>

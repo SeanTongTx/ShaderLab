@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShaderVariants
+  m_Shaders:
+  - first: {fileID: 4800000, guid: 2b274a9633954a84593341b97565376a, type: 3}
+    second:
+      variants:
+      - keywords: USE_FIXED_VIEW_LIGHTDIR
+        passType: 4
+  - first: {fileID: 4800000, guid: 96b61c7bb36ac6f40bdabd660f0c624d, type: 3}
+    second:
+      variants:
+      - keywords: USE_FIXED_VIEW_LIGHTDIR
+        passType: 4
+  - first: {fileID: 4800000, guid: 067e2ec8a5f61eb4ba697ac982acc72b, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 597ac5ece217c084396d30ecad3c4b12, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 59e161bcc7e74554580f4f91132178cd, type: 3}
+    second:
+      variants:
+      - keywords: USE_FIXED_VIEW_LIGHTDIR
+        passType: 4
